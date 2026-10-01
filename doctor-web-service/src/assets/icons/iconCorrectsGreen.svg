@@ -1,0 +1,30 @@
+<svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="16" height="13" fill="#D5D5D5"/>
+<g id="Patient Profile">
+<rect id="Rectangle 24618" x="-7926" y="-3317" width="11861" height="5385" fill="#B1B1B1"/>
+<g id="Timeline state">
+<rect width="716" height="2213" transform="translate(-469 -2043)" fill="white"/>
+<g id="Rectangle 24659" filter="url(#filter0_d_314_387)">
+<rect x="-419" y="-257" width="616" height="319" rx="8" fill="white"/>
+</g>
+<g id="Button">
+<rect x="-13.5" y="-12.5" width="168" height="38" rx="7.5" fill="#F5F4FE"/>
+<path id="Icon" fill-rule="evenodd" clip-rule="evenodd" d="M15.6952 0.810122C16.1016 1.22362 16.1016 1.89403 15.6952 2.30753L5.98167 12.1899C5.57524 12.6034 4.91628 12.6034 4.50985 12.1899L0.30483 7.91177C-0.101602 7.49827 -0.101602 6.82786 0.30483 6.41436C0.711261 6.00087 1.37022 6.00087 1.77665 6.41436L5.24576 9.94377L14.2234 0.810122C14.6298 0.396626 15.2887 0.396626 15.6952 0.810122Z" fill="#735BF2"/>
+<rect x="-13.5" y="-12.5" width="168" height="38" rx="7.5" stroke="#735BF2"/>
+</g>
+</g>
+<rect x="-24483" y="-4829" width="30445" height="12277" stroke="black" stroke-width="10"/>
+</g>
+<rect id="Rectangle 24706" x="-40140.5" y="-29432.5" width="48585" height="38830" stroke="black" stroke-width="15"/>
+<defs>
+<filter id="filter0_d_314_387" x="-449" y="-284" width="676" height="379" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="3"/>
+<feGaussianBlur stdDeviation="15"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0588235 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_314_387"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_314_387" result="shape"/>
+</filter>
+</defs>
+</svg>

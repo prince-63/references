@@ -1,0 +1,22 @@
+import React from 'react'
+
+const TickIcon = ({height, width, color}: {height?: string; width?: string; color?: string}) => {
+  return (
+    <svg
+      width={width || '17'}
+      height={height || '12'}
+      viewBox='0 0 17 12'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path
+        fillRule='evenodd'
+        clipRule='evenodd'
+        d='M16.6761 0.310122C17.108 0.723619 17.108 1.39403 16.6761 1.80753L6.35552 11.6899C5.92369 12.1034 5.22355 12.1034 4.79171 11.6899L0.323882 7.41177C-0.107952 6.99827 -0.107952 6.32786 0.323882 5.91436C0.755715 5.50087 1.45586 5.50087 1.88769 5.91436L5.57362 9.44377L15.1123 0.310122C15.5442 -0.103374 16.2443 -0.103374 16.6761 0.310122Z'
+        fill={color || '#00B383'}
+      />
+    </svg>
+  )
+}
+
+export default TickIcon

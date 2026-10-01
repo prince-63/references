@@ -1,0 +1,4 @@
+export default {
+  SMILE_SIMULATION: 'SMILE_SIMULATION',
+  PATIENT_CONSENT: 'PATIENT_CONSENT',
+} as const

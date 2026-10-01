@@ -1,0 +1,11 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# Run linting and treat warnings as errors
+npm run lint -- --max-warnings=0
+
+# Prettier check
+npm run prettier:check
+
+# Run spellcheck
+npm run cspell:check

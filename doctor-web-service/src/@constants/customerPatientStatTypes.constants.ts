@@ -1,0 +1,6 @@
+export default {
+  PATIENTS: 'PATIENTS',
+  ORDERS: 'ORDERS',
+  LAST_ORDER_AT: 'LAST_ORDER_AT',
+  TRACKING: 'SETTINGS',
+} as const

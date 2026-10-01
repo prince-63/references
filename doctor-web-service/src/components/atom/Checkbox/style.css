@@ -1,0 +1,60 @@
+/* Reusable green checkbox atom styles */
+.green-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+  background-color: transparent;
+}
+
+.green-checkbox:not(:checked) {
+  border: 1px solid #d9d9d9;
+}
+
+.green-checkbox:checked {
+  background-color: #00b383;
+  border: 1px solid #00b383;
+}
+
+/* Visual check mark via ::after for modern browsers */
+.green-checkbox:checked::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: relative;
+  top: 2px;
+  left: 5px;
+}
+
+/* Disabled appearance (muted gray) */
+.green-checkbox:disabled,
+input.green-checkbox[disabled] {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #f3f4f6; /* light gray for unchecked disabled */
+  border: 1px solid #e5e7eb; /* muted border */
+}
+
+.green-checkbox:disabled:checked,
+input.green-checkbox[disabled]:checked {
+  background-color: #d1d5db; /* slightly darker gray when checked */
+  border-color: #d1d5db;
+}
+
+/* Dim the check mark when disabled */
+.green-checkbox:disabled::after,
+input.green-checkbox[disabled]::after,
+.green-checkbox:disabled:checked::after,
+input.green-checkbox[disabled]:checked::after {
+  border-color: #9ca3af;
+}
+
+/* Fallback background SVG check mark handled in global index.css for broader compatibility */

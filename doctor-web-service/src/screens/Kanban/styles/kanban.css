@@ -1,0 +1,317 @@
+/* Kanban: rely on global app font (Figtree) defined in src/index.css */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.header,
+.footer {
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.kanban-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  max-height: calc(100vh - 140px); /* adjust offset for header/toolbars */
+}
+
+.kanban {
+  display: flex;
+  flex: 1 1 auto;
+  height: 100%;
+  min-height: 0; /* allow children to scroll inside */
+  overflow-x: auto;
+  overflow-y: auto; /* allow vertical scrolling when columns exceed viewport */
+  background: var(--white, #ffffff);
+  padding: 12px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable both-edges; /* keep space for scrollbar so content (last column) isn't covered */
+}
+
+.kanban-container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch; /* make all columns equal height */
+  min-height: 100%;
+  padding: 8px 80px 8px 8px; /* increased right padding to guarantee last status reachability */
+  gap: 12px;
+  width: max-content;
+}
+
+.kanban-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  min-height: 0; /* prevent overflow and enable inner scroll */
+  min-width: 300px;
+  max-width: 340px;
+  border: 1px solid transparent; /* make columns subtle */
+  border-radius: 8px;
+  background-color: var(--primary-support, #f5f5f5);
+  overflow: hidden; /* keep rounded corners while list scrolls inside */
+  will-change: transform;
+  contain: content;
+}
+
+.kanban-column-header {
+  padding: 12px 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--neutral-black, #1d1f2c);
+  display: flex;
+  align-items: center;
+}
+
+/* header pill (small rounded count) */
+.kanban-header-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  padding: 0 8px;
+  background: var(--primary-support, #f5f5f5);
+  border: 1px solid var(--lighter-gray, #e6e6e6);
+  font-size: 12px;
+  color: var(--text-color, #666666);
+}
+
+/* red date pill used on cards */
+.kanban-card-date {
+  display: inline-block;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid var(--red, #f45045);
+  color: var(--red, #f45045);
+  background: var(--red-support, #fef4f4);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* card id chip */
+.kanban-card-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: var(--primary-support, #f5f4fe);
+  color: var(--primary-color, #5731f7);
+  font-size: 13px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+/* small circular avatar */
+.kanban-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: var(--white, #fff);
+  background: var(--primary-color, #6c5ce7);
+}
+
+.kanban-column-list {
+  padding: 12px 12px 16px;
+}
+.kanban-column {
+  background: var(--primary-support, #f5f5f5);
+}
+.kanban {
+  padding: 8px 0px;
+}
+
+/* Purple borders for inputs and selects within Kanban controls */
+.kanban-controls .ant-input-affix-wrapper,
+.kanban-controls .ant-input,
+.kanban-controls .ant-select-selector {
+  border-color: #9ca3af !important; /* darker grey */
+  box-shadow: none !important;
+}
+.kanban-controls .ant-input-search .ant-input-search-button,
+.kanban-controls .ant-input-search .ant-btn,
+.kanban-controls .ant-input-group-addon .ant-btn {
+  border-color: #9ca3af !important; /* darker grey */
+}
+.kanban-controls .ant-input-affix-wrapper:hover,
+.kanban-controls .ant-input:hover,
+.kanban-controls .ant-select-selector:hover,
+.kanban-controls .ant-input-affix-wrapper-focused,
+.kanban-controls .ant-input-focused,
+.kanban-controls .ant-select-focused .ant-select-selector {
+  border-color: #9ca3af !important; /* darker grey */
+  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.06) !important; /* subtle neutral focus */
+}
+.kanban-controls .ant-input-search .ant-input-search-button:hover,
+.kanban-controls .ant-input-search .ant-btn:hover,
+.kanban-controls .ant-input-group-addon .ant-btn:hover {
+  border-color: #9ca3af !important; /* darker grey */
+}
+
+/* Fixed bottom scrollbar wrapper for Kanban (sits below board) */
+.kanban-scrollbar-wrapper {
+  position: sticky; /* stays within flow but sticks at bottom of viewport area */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--white, #fff);
+  padding: 4px 0 0;
+  z-index: 5;
+}
+
+.kanban-scrollbar {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.kanban-scrollbar-inner {
+  height: 1px; /* minimal height just to host scrollbar */
+}
+
+/* Fixed variant at the very bottom of page */
+.kanban-scrollbar-wrapper-fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--white, #fff);
+  padding: 2px 0 0;
+  border-top: 1px solid var(--lighter-gray, #e6e6e6);
+  z-index: 30;
+  opacity: 1;
+  transition: opacity 0.18s ease;
+}
+
+.kanban-scrollbar-wrapper-fixed.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Prevent global horizontal scrollbar */
+body {
+  overflow-x: hidden;
+}
+
+/* Hide native scrollbar of main kanban viewport when external shown */
+.kanban-native-hidden::-webkit-scrollbar {
+  height: 0 !important;
+}
+.kanban-native-hidden {
+  scrollbar-width: none;
+}
+.kanban-native-hidden {
+  -ms-overflow-style: none;
+}
+
+.kanban-column-list {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0; /* let this area be scrollable */
+  overflow-y: auto;
+  margin: 0;
+  padding: 12px;
+  list-style: none;
+  gap: 10px;
+}
+
+.kanban-column-footer {
+  padding: 10px;
+  font-size: 0.875rem;
+}
+
+.card {
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(29, 31, 44, 0.06);
+  background-color: var(--white, #ffffff);
+  margin-bottom: 8px;
+  cursor: grab;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+  box-shadow: 0 8px 24px rgba(29, 31, 44, 0.12);
+}
+
+/* Custom Scroll */
+/* scrollbar refinements kept light to match global styles */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--medium-gray, #d9d9d9);
+  border-radius: 6px;
+}
+
+/* (reverted) Removed header input normalization to restore original Search and spacing */
+
+@media (max-width: 767px) {
+  /* Reduce Kanban wrapper height on mobile to fit viewport better */
+  .kanban {
+    padding: 4px 8px;
+  }
+  .kanban-container {
+    gap: 8px;
+    padding: 4px 64px 8px 4px; /* extra right padding on mobile too */
+  }
+  .kanban-column {
+    min-width: 240px;
+    max-width: 240px;
+    /* Constrain column height on mobile so it fits in viewport */
+  }
+  .kanban-column-header {
+    padding: 10px 10px;
+    font-size: 0.8rem;
+  }
+  /* Bottom spacer on mobile to ensure last card is fully visible above nav */
+  .kanban-column-list::after {
+    height: 380px; /* increased to ensure last card fully clears bottom nav and safe areas */
+  }
+  .card {
+    padding: 6px;
+  }
+  .kanban-card-date {
+    font-size: 11px;
+    padding: 4px 8px;
+  }
+  .kanban-card-chip {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+  .kanban-column-list {
+    padding: 8px;
+    gap: 8px;
+  }
+}

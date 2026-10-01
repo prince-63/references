@@ -1,0 +1,81 @@
+package com.dentalstack.patient.feature.treatment.dto.action;
+
+import com.dentalstack.patient.feature.events.dto.Update;
+import com.dentalstack.patient.feature.events.entity.Event;
+import com.dentalstack.patient.feature.events.metadata.feedback.AlignerFeedbackType;
+import com.dentalstack.patient.feature.patient.entity.Patient;
+import com.dentalstack.patient.feature.storage.dto.AlignerPhotoDetails;
+import com.dentalstack.patient.feature.treatment.dto.feedback.AlignerCheckInFeedbackDetails;
+import com.dentalstack.patient.feature.treatment.dto.feedback.AlignerFeedbackDetails;
+import com.dentalstack.patient.feature.treatment.entity.AlignerFeedback;
+import com.dentalstack.patient.feature.treatment.entity.AlignerPhoto;
+import com.dentalstack.patient.feature.treatment.entity.action.AlignerAction;
+import com.dentalstack.patient.feature.treatment.enums.JawType;
+import jakarta.annotation.Nullable;
+import jakarta.validation.constraints.NotNull;
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import lombok.*;
+import lombok.experimental.SuperBuilder;
+
+@Data
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class AlignerCheckInUpdate extends Update implements Serializable {
+
+    private Long alignerJourneyId;
+    private Integer alignerNo;
+    private long alignerActionId;
+
+    @NotNull
+    private JawType alignerJawType;
+
+    @Nullable
+    private List<AlignerPhotoDetails> alignerPhotos;
+
+    private Long patientId;
+
+    @Builder.Default
+    private List<AlignerFeedbackDetails> comments = new ArrayList<>();
+
+    private AlignerCheckInFeedbackDetails feedback;
+
+    public static AlignerCheckInUpdate from(
+            Event event,
+            Patient patient,
+            AlignerAction action,
+            List<AlignerFeedback> feedbacks,
+            List<AlignerPhoto> photos) {
+        var aligner = action.getAligner();
+        var alignerCheckInFeedback = feedbacks.stream()
+                .filter(f -> f.getFeedbackType().equals(AlignerFeedbackType.ALIGNER_CHECK_IN))
+                .findAny();
+
+        return AlignerCheckInUpdate.builder()
+                .alignerActionId(action.getId())
+                .eventId(event.getId())
+                .patientId(patient.getId())
+                .eventType(event.getType())
+                .eventAt(event.getCreatedAt())
+                .patientName(patient.fullName())
+                .patientProfileImageUrl(patient.getProfilePictureUrl())
+                .active(event.isActive())
+                .read(event.isRead())
+                .alignerJawType(aligner.getJawType())
+                .alignerNo(aligner.getSrNo())
+                .patientId(patient.getId())
+                .alignerPhotos(photos.stream().map(AlignerPhotoDetails::from).toList())
+                .alignerJourneyId(aligner.getAlignerJourney().getId())
+                .feedback(alignerCheckInFeedback
+                        .map(AlignerCheckInFeedbackDetails::from)
+                        .orElse(null))
+                .comments(feedbacks.stream()
+                        .filter(f -> f.getFeedbackType().equals(AlignerFeedbackType.MISC))
+                        .map(AlignerFeedbackDetails::from)
+                        .toList())
+                .build();
+    }
+}

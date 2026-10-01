@@ -1,0 +1,35 @@
+package com.dentalstack.patient.feature.vsp.dto.request;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+public class CreateVspBillingDetailsRequest {
+
+    private String addressedTo;
+
+    private String name;
+
+    private String addressLine;
+
+    private String city;
+
+    private String state;
+
+    private String country;
+
+    private String pincode;
+
+    private String mobileNumber;
+
+    private boolean isDefault;
+
+    private Long profileId;
+
+    private Long customerProfileId;
+}

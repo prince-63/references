@@ -1,0 +1,18 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appID": "NDBSAPURB8.com.dentalstack.doctor.smilezy",
+        "paths": [ "/view-case/*", "/profile/*", "/*" ]
+      },
+      {
+        "appID": "H9Y72KBPLP.com.dentalstack.doctor",
+        "paths": [ "/view-case/*", "/profile/*", "/*" ]
+      },
+      {
+        "appID": "2ABBCT8KL2.com.dentalstack.doctor-routetosmile",
+        "paths": [ "/view-case/*", "/profile/*", "/*" ]
+      }
+    ]
+  }
+}

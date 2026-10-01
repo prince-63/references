@@ -1,0 +1,358 @@
+/* index.css */
+.fc {
+  font-family: 'Figtree' !important;
+  zoom: 111.11%; /* Counteract the 90% zoom */
+  max-height: 95vh !important;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .fc {
+    font-size: 0.9em; /* Reduce font size for mobile devices */
+  }
+
+  .fc-view-harness.fc-view-harness-active {
+    height: 70vh !important; /* Set height to 80vh for mobile devices */
+  }
+}
+
+/* Theme Standard */
+.fc-theme-standard .fc-scrollgrid,
+.fc-theme-standard .fc-scrollgrid-section,
+.fc-theme-standard .fc-scrollgrid-section > th {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+
+.fc-theme-standard .fc-scrollgrid-section > th {
+  border-top-left-radius: 10px !important;
+  border-top-right-radius: 10px !important;
+}
+
+.fc-theme-standard .fc-scrollgrid-section:last-child > td:first-child {
+  border-bottom-left-radius: 10px !important;
+}
+
+.fc-theme-standard .fc-scrollgrid-section:last-child > td:last-child {
+  border-bottom-right-radius: 10px !important;
+}
+/* Full Width Elements */
+.fc-daygrid-body,
+.fc-scrollgrid-sync-table,
+.fc-col-header,
+.fc-timegrid-body,
+.fc-timegrid-slots > table,
+.fc-timegrid-cols > table {
+  width: 100% !important;
+}
+
+/* Responsive View Buttons */
+@media (max-width: 768px) {
+  .fc-toolbar.fc-header-toolbar .fc-dayGridMonth-button,
+  .fc-toolbar.fc-header-toolbar .fc-timeGridWeek-button,
+  .fc-toolbar.fc-header-toolbar .fc-listWeek-button,
+  .fc-toolbar.fc-header-toolbar .fc-divider-button,
+  .fc-toolbar.fc-header-toolbar .fc-timeGridDay-button {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-toolbar-title {
+    /* margin-right: 2rem !important; */
+    margin-right: 0 !important;
+  }
+  .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-next-button {
+    margin-right: 3.1rem !important;
+  }
+  .fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-prev-button {
+    margin-left: 0 !important;
+  }
+}
+
+@media (min-width: 769px) {
+  .fc-toolbar.fc-header-toolbar .fc-dayGridMonth-button,
+  .fc-toolbar.fc-header-toolbar .fc-timeGridWeek-button,
+  .fc-toolbar.fc-header-toolbar .fc-timeGridDay-button,
+  .fc-toolbar.fc-header-toolbar .fc-listMonth-button {
+    display: inline-block;
+  }
+}
+
+/* Header Toolbar */
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk:last-child {
+  display: flex; /* Use flexbox */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-end; /* Align items to the right */
+}
+
+/* Title Styling */
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-toolbar-title {
+  margin-right: 12px; /* Add some margin to the right */
+  color: var(--Black, #000);
+  font-family: Figtree;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 150% */
+}
+
+/* Navigation Buttons (prev, next, today) */
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-prev-button,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-next-button {
+  margin: 0 5px; /* Add some margin */
+  border-radius: 4px; /* Rounded corners */
+  border: 1px solid var(--Medium-Gray, #d9d9d9); /* Border color */
+  background: var(--White, #fff); /* Background color */
+  padding: 5px 10px; /* Add some padding */
+  font-size: 12px; /* Smaller font size */
+  color: #666666; /* Arrow color */
+  transition:
+    background-color 0.3s,
+    border-color 0.3s; /* Smooth transition */
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-next-button {
+  margin-right: 24px; /* Add some margin to the right */
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-prev-button:focus,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-next-button:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: none; /* Remove box shadow on focus */
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-prev-button:hover,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-next-button:hover,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-today-button:hover {
+  background-color: #f0f0f0; /* Slightly darker background on hover */
+  border-color: #c0c0c0; /* Darker border color on hover */
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-prev-button:active,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-next-button:active,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-today-button:active {
+  background-color: #e0e0e0; /* Even darker background on active */
+  border-color: #a0a0a0; /* Even darker border color on active */
+}
+
+/* View Buttons (month, week, day, list) */
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-dayGridMonth-button,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridWeek-button,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridDay-button,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-listWeek-button {
+  background-color: #efefef; /* Light background color */
+  color: #666666; /* Button text color */
+  border: none; /* Remove border */
+  padding: 5px 20px; /* Add some padding */
+  transition: background-color 0.3s; /* Smooth transition */
+  outline: none; /* Remove outline */
+  font-weight: 500;
+}
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-createButton-button {
+  margin-left: 10px;
+  background: var(--primary-color);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-weight: 500 !important;
+  font-size: 16px;
+  outline: none;
+  border: none;
+}
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-divider-button {
+  margin-left: 10px;
+  background: none;
+  color: #d9d9d9;
+  cursor: default;
+  outline: none;
+  border-radius: 8px;
+  pointer-events: none;
+  border: none;
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-dayGridMonth-button:focus,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridWeek-button:focus,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridDay-button:focus,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-createButton-button:focus,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-divider-button,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-listWeek-button:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: none; /* Remove box shadow on focus */
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridDay-button {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-listWeek-button {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-dayGridMonth-button:hover,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridWeek-button:hover,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridDay-button:hover,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-listWeek-button:hover {
+  background-color: #dcdcdc; /* Darker background color on hover */
+}
+
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-dayGridMonth-button:active,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridWeek-button:active,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridDay-button:active,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-listWeek-button:active {
+  background-color: #c0c0c0; /* Even darker background color on active */
+}
+
+/* Active State */
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-dayGridMonth-button.fc-button-active,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridWeek-button.fc-button-active,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-timeGridDay-button.fc-button-active,
+.fc-toolbar.fc-header-toolbar .fc-toolbar-chunk .fc-listWeek-button.fc-button-active {
+  border-radius: 6px;
+  border: 1px solid var(--Medium-Gray, #d9d9d9);
+  background: var(--White, #fff);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+  color: black;
+}
+
+/* Custom Div Buttons */
+.fc-toolbar.fc-header-toolbar .fc-titleText-button,
+.fc-toolbar.fc-header-toolbar .fc-subTitleText-button {
+  background: none; /* Remove background */
+  color: #000; /* Text color */
+  border: none; /* Remove border */
+  display: flex;
+  flex-direction: column; /* Arrange items in a column */
+  align-items: flex-start; /* Align items to the start */
+  padding: 0; /* Remove padding */
+  outline: none; /* Remove outline */
+  box-shadow: none; /* Remove box shadow */
+  cursor: default; /* Change cursor to default */
+  user-select: none; /* Prevent text selection */
+  pointer-events: none;
+}
+
+/* Hide Custom Div Buttons on Mobile */
+@media (max-width: 767px) {
+  .fc-toolbar.fc-header-toolbar .fc-titleText-button,
+  .fc-toolbar.fc-header-toolbar .fc-subTitleText-button {
+    display: none;
+  }
+}
+
+.fc-toolbar.fc-header-toolbar .fc-titleText-button {
+  font-size: 24px; /* Set font size for titleText */
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.24px;
+}
+
+.fc-toolbar.fc-header-toolbar .fc-subTitleText-button {
+  font-size: 16px; /* Set font size for subTitleText */
+  margin-left: 0;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--Gray-text-color, #666);
+}
+
+.fc-toolbar.fc-header-toolbar .fc-titleText-button:focus,
+.fc-toolbar.fc-header-toolbar .fc-subTitleText-button:focus,
+.fc-toolbar.fc-header-toolbar .fc-titleText-button:active,
+.fc-toolbar.fc-header-toolbar .fc-subTitleText-button:active {
+  outline: none; /* Remove outline on focus and active */
+  box-shadow: none; /* Remove box shadow on focus and active */
+  background: none; /* Remove background on focus and active */
+}
+
+.fc-toolbar.fc-header-toolbar .fc-titleText-button:focus-visible,
+.fc-toolbar.fc-header-toolbar .fc-subTitleText-button:focus-visible {
+  outline: none; /* Remove outline on focus-visible */
+  box-shadow: none; /* Remove box shadow on focus-visible */
+  background: none; /* Remove background on focus-visible */
+}
+
+/* Event Styling */
+.fc-v-event,
+.fc-h-event {
+  background: #e0e0e0;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.fc-direction-ltr .fc-daygrid-event.fc-event-end,
+.fc-direction-rtl .fc-daygrid-event.fc-event-start:hover {
+  background: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.fc-timegrid-event-harness-inset .fc-timegrid-event,
+.fc-timegrid-event.fc-event-mirror,
+.fc-timegrid-more-link {
+  box-shadow: none;
+}
+
+.fc-v-event:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+/* Day Grid */
+.fc .fc-daygrid-day.fc-day-today {
+  background-color: white;
+}
+
+.fc .fc-daygrid-day-top {
+  display: flex !important;
+  flex-direction: row !important;
+}
+
+/* Today View Background Color */
+.fc .fc-day-today {
+  background-color: #f5f4fe;
+}
+.fc .fc-day-today > .fc-daygrid-day-frame > .fc-daygrid-day-top > .fc-daygrid-day-number {
+  color: white;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #735bf2;
+  border-radius: 50%;
+  width: 30px; /* Adjust the width and height to make it a perfect circle */
+  height: 30px;
+  text-align: center;
+  line-height: 30px; /* Ensure the text is vertically centered */
+}
+.fc .fc-scrollgrid-sync-inner {
+  padding: 12px;
+}
+
+/* Today Indicator Background Color */
+.fc .fc-timeGridWeek-view .fc-day-today .fc-timegrid-now-indicator-container {
+  background-color: #f5f4fe;
+}
+
+.fc .fc-timeGridDay-view .fc-day-today .fc-timegrid-now-indicator-container {
+  background-color: white;
+}
+
+/* Time Slot Height */
+.fc .fc-timegrid-slot {
+  height: 80px;
+}
+
+.fc .fc-list-day-cushion {
+  padding: 0;
+}
+
+.fc-theme-standard .fc-list {
+  border-radius: 8px !important;
+}
+.fc-list-empty {
+  background: none !important;
+}

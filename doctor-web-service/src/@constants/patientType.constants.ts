@@ -1,0 +1,4 @@
+export default {
+  NEW_PATIENT: 'NEW_PATIENT',
+  EXISTING_PATIENT: 'EXISTING_PATIENT',
+} as const

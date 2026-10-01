@@ -1,0 +1,33 @@
+package com.dentalstack.patient.feature.storage.dto;
+
+import com.dentalstack.patient.feature.user.dto.UserId;
+import jakarta.annotation.Nullable;
+import jakarta.validation.constraints.NotNull;
+import java.util.HashSet;
+import java.util.Set;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
+public class CreateFolderHierarchyRequest {
+    @NotNull
+    @Builder.Default
+    private String path = "/";
+
+    @NotNull
+    private UserId uploader;
+
+    @Builder.Default
+    private Set<UserId> owners = new HashSet<>();
+
+    @Nullable
+    private Boolean isDefaultFolder;
+
+    @Nullable
+    private Boolean isPatientFolder;
+}

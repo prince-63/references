@@ -1,0 +1,28 @@
+const currencyList = [
+  {label: 'USD', value: 'USD'},
+  {label: 'EUR', value: 'EUR'},
+  {label: 'JPY', value: 'JPY'},
+  {label: 'GBP', value: 'GBP'},
+  {label: 'AUD', value: 'AUD'},
+  {label: 'CAD', value: 'CAD'},
+  {label: 'CHF', value: 'CHF'},
+  {label: 'CNY', value: 'CNY'},
+  {label: 'INR', value: 'INR'},
+  {label: 'SGD', value: 'SGD'},
+  {label: 'NZD', value: 'NZD'},
+  {label: 'HKD', value: 'HKD'},
+  {label: 'KRW', value: 'KRW'},
+  {label: 'BRL', value: 'BRL'},
+  {label: 'ZAR', value: 'ZAR'},
+  {label: 'MXN', value: 'MXN'},
+  {label: 'SEK', value: 'SEK'},
+  {label: 'NOK', value: 'NOK'},
+  {label: 'RUB', value: 'RUB'},
+  {label: 'TRY', value: 'TRY'},
+  {label: 'SAR', value: 'SAR'},
+  {label: 'AED', value: 'AED'},
+  {label: 'THB', value: 'THB'},
+  {label: 'MYR', value: 'MYR'},
+]
+
+export default currencyList

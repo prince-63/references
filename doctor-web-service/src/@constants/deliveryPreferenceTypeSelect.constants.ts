@@ -1,0 +1,4 @@
+export default {
+  IN_BATCHES: 'IN_BATCHES',
+  ALL_ALIGNERS: 'ALL_ALIGNERS',
+}

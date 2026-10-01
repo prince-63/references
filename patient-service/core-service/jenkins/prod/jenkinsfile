@@ -1,0 +1,59 @@
+#!groovy
+@Library('jenkinsci@main-gcp')
+
+/****** Service Related property *************/
+def slackChannel       = "prod-deployment"
+def serviceUrl         = "https://patient.dental-stack.com/actuator/health/"
+def branchName         = "${branch}"
+
+/******* Deployment Related property **********/
+def ecrRepo            = "prod-ds-patient-service/prod-ds-patient-service"
+def deploymentName     = "patient-service"
+def projectName        = "Patient Service"
+def maxRolloutWait     = 1800
+def serviceArtifacts   = "patient-service"
+def namespace          = "prod-ds-patient"
+def dockerfileLocation = "./core-service/docker/Dockerfile"
+def configFolderLocation = "core-service/src/main/resources/"
+def preDeployTest      = false
+def isServiceDeploy    = true
+def vaultLocation      = ""
+def isDbMigration     = false
+
+/***** Cron Modification ******/
+def isCron             = false
+def cronEcrRepo        = ""
+
+/**** DO NOT EDIT BELOW PROPERTY ***/
+def dockerTarget       = "prod"
+def arch               = "arm64"
+
+buildDeploy([
+        "dockerConfig": [
+                "serviceEcrRepoName":  ecrRepo,
+                "dockerfilePath":      dockerfileLocation,
+                "cronEcrRepoName":     cronEcrRepo,
+                "dockerTarget":        dockerTarget
+        ],
+        "kubernetesConfig": [
+                "namespace":           namespace,
+                "deploymentName":      deploymentName,
+                "maxRolloutWait":      maxRolloutWait,
+                "arch":                arch
+        ],
+        "test": [
+                "preDeployTest":       preDeployTest
+        ],
+        "serviceInfo": [
+                "slackChannelName":    slackChannel,
+                "projectName":         projectName,
+                "serviceUrl":          serviceUrl,
+                "artifactLocation":    serviceArtifacts,
+                "isServiceDeploy":     isServiceDeploy,
+                "isDBMigration":       isDbMigration,
+                "vaultLocation":       vaultLocation,
+                "configFolderLocation": configFolderLocation,
+                "isCronDeploy":        isCron,
+                "branchName":          branchName
+        ]
+])

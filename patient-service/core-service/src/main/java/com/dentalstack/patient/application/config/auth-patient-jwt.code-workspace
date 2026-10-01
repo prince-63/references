@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../../../../../../../../auth-service"
+		},
+		{
+			"path": "../../../../../../../../.."
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}

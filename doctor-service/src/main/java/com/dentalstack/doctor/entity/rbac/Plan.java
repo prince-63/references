@@ -1,0 +1,29 @@
+package com.dentalstack.doctor.entity.rbac;
+
+import com.dentalstack.doctor.entity.BaseEntity;
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Entity;
+import jakarta.persistence.OneToMany;
+import jakarta.persistence.Table;
+import jakarta.validation.constraints.NotNull;
+import java.util.HashSet;
+import java.util.Set;
+import lombok.*;
+
+@Entity
+@Table(name = "plan")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+public class Plan extends BaseEntity {
+    @NotNull
+    private String name;
+
+    private String description;
+
+    @OneToMany(mappedBy = "plan", cascade = CascadeType.ALL, orphanRemoval = true)
+    @Builder.Default
+    private Set<SubRole> subRoles = new HashSet<>();
+}

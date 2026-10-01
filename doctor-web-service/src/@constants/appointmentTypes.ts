@@ -1,0 +1,4 @@
+export default {
+  ADD_REMINDER: 'ADD_REMINDER',
+  ADD_APPOINTMENT: 'ADD_APPOINTMENT',
+} as const

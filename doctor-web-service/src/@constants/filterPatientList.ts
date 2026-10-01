@@ -1,0 +1,5 @@
+export default {
+  NOT_CONNECTED: 'NOT_CONNECTED',
+  PENDING: 'PENDING',
+  CONNECTED: 'CONNECTED',
+} as const

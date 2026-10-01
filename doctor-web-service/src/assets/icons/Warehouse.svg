@@ -1,0 +1,15 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Warehouse" clip-path="url(#clip0_21653_864)">
+<path id="Vector" d="M1.25 15H18.75" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M18.75 3.75L1.25 7.5" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M5.625 15V10H14.375V15" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M5.625 12.5H14.375" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M2.5 7.23193V14.9999" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M17.5 4.01807V15.0001" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_21653_864">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>

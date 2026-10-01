@@ -1,0 +1,5 @@
+export default {
+  IN_PRINTING: 'IN_PRINTING',
+  IN_PRODUCTION: 'IN_PRODUCTION',
+  IN_TRANSIT: 'IN_TRANSIT',
+} as const

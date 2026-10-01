@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Custom gray scale */
+  --app-gray-default: 128 128 128;
+  --app-gray-50: 249 250 251;
+  --app-gray-100: 243 244 246;
+  --app-gray-200: 229 231 235;
+  --app-gray-300: 209 213 219;
+  --app-gray-400: 156 163 175;
+  --app-gray-500: 107 114 128;
+  --app-gray-600: 75 85 99;
+  --app-gray-700: 55 65 81;
+  --app-gray-800: 31 41 55;
+  --app-gray-900: 17 24 39;
+  --app-gray-950: 3 7 18;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-figtree);
+
+  /* Custom gray colors */
+  --color-gray-DEFAULT: rgb(var(--app-gray-default));
+  --color-gray-50: rgb(var(--app-gray-50));
+  --color-gray-100: rgb(var(--app-gray-100));
+  --color-gray-200: rgb(var(--app-gray-200));
+  --color-gray-300: rgb(var(--app-gray-300));
+  --color-gray-400: rgb(var(--app-gray-400));
+  --color-gray-500: rgb(var(--app-gray-500));
+  --color-gray-600: rgb(var(--app-gray-600));
+  --color-gray-700: rgb(var(--app-gray-700));
+  --color-gray-800: rgb(var(--app-gray-800));
+  --color-gray-900: rgb(var(--app-gray-900));
+  --color-gray-950: rgb(var(--app-gray-950));
+
+  /* Brand box shadows */
+  --shadow-first: 0px 0px 19px 13px rgba(0, 0, 0, 0.08);
+  --shadow-second: 0px 3px 30px 0px rgba(0, 0, 0, 0.06);
+  --shadow-colorPrimary: 0px 4px 23px 1px rgba(115, 91, 242, 0.49);
+  --shadow-footerShadow: 0px -13px 34px 0px rgba(0, 0, 0, 0.06);
+
+  /* Custom animations */
+  @keyframes open {
+    0% {
+      opacity: 1;
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes close {
+    to {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+  }
+
+  @keyframes waving {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    10% {
+      transform: rotate(14deg);
+    }
+
+    20% {
+      transform: rotate(-8deg);
+    }
+
+    30% {
+      transform: rotate(14deg);
+    }
+
+    40% {
+      transform: rotate(-4deg);
+    }
+
+    50% {
+      transform: rotate(10deg);
+    }
+
+    60% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes slide-in-right {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  --animate-drawer-open: open 0.3s ease-in-out;
+  --animate-drawer-close: close 0.3s ease-in-out;
+  --animate-waving-hand: waving 2s infinite;
+  --animate-slide-in-right: slide-in-right 0.3s ease-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-karla), Arial, Helvetica, sans-serif;
+}

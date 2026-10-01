@@ -1,0 +1,6 @@
+export default {
+  NEW: 'NEW',
+  CRITICAL: 'CRITICAL',
+  COMPLETED: 'COMPLETED',
+  NORMAL: 'NORMAL',
+}

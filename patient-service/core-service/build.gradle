@@ -1,0 +1,147 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.0.1'
+    id 'io.spring.dependency-management' version '1.1.3'
+    id "com.diffplug.spotless" version "7.0.2"
+    id 'org.jetbrains.kotlin.jvm' version '1.9.0'
+}
+
+group = 'com.dentalstack'
+version = '0.0.1-SNAPSHOT'
+
+java {
+}
+
+ext {
+    set('springCloudVersion', "2023.0.0")
+}
+
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-rest'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+    implementation 'io.hypersistence:hypersistence-utils-hibernate-60:3.0.1'
+    implementation 'commons-io:commons-io:2.13.0'
+    implementation 'org.springframework:spring-web'
+
+    // Stream abstraction
+    implementation("org.springframework.cloud:spring-cloud-stream")
+
+    // RabbitMQ binder
+    implementation("org.springframework.cloud:spring-cloud-stream-binder-rabbit")
+
+    // Eureka
+    implementation 'org.springframework.cloud:spring-cloud-starter-feign:1.4.6.RELEASE'
+
+    // Resilience4j circuit breaker for Feign clients (TD-008)
+    implementation 'org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j'
+
+    // Explicit resilience4j dependencies to fix classpath issues
+    implementation 'io.github.resilience4j:resilience4j-core:2.0.2'
+    implementation 'io.github.resilience4j:resilience4j-circuitbreaker:2.0.2'
+
+    implementation 'io.github.openfeign:feign-jackson:12.4'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+    implementation 'org.yaml:snakeyaml:2.0'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.69'
+
+    // Postgres
+    runtimeOnly 'org.postgresql:postgresql'
+    implementation 'org.hibernate.validator:hibernate-validator:8.0.0.Final'
+
+    implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.2.0'
+
+    // AWS dependencies
+    implementation platform('com.amazonaws:aws-java-sdk-bom:1.12.705')
+    implementation 'com.amazonaws:aws-java-sdk-s3:1.12.705'
+
+    // Scheduling
+    implementation 'org.springframework.boot:spring-boot-starter-quartz:3.1.5'
+
+    // Monitoring
+    implementation 'org.springframework.boot:spring-boot-starter-actuator:3.1.6'
+
+    implementation 'org.modelmapper:modelmapper:3.1.1'
+
+    compileOnly 'org.projectlombok:lombok'
+
+    annotationProcessor 'org.projectlombok:lombok'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    implementation 'com.opencsv:opencsv:5.5'
+    implementation 'com.google.code.findbugs:jsr305:3.0.2'
+
+    //charge bee
+    implementation 'com.chargebee:chargebee-java:3.18.0'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4.1'
+
+    // Spring Boot Starter Data Redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    // Spring Cache Abstraction
+    implementation 'org.springframework.boot:spring-boot-starter-cache'
+    // Caffeine for in-process caching (Drive instance cache)
+    implementation 'com.github.ben-manes.caffeine:caffeine:3.1.8'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compileJava.options.encoding = 'UTF-8'
+
+    // -------------------------------------------------------------------------
+    implementation  'io.jsonwebtoken:jjwt-api:0.12.3'      // compile-time API
+    runtimeOnly     'io.jsonwebtoken:jjwt-impl:0.12.3'     // runtime implementation
+    runtimeOnly     'io.jsonwebtoken:jjwt-jackson:0.12.3'  // JSON serialization via Jackson
+
+
+    //security
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+
+    // Google Sheets API
+    implementation 'com.google.api-client:google-api-client:1.33.4'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.34.1'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev612-1.25.0'
+
+    // Google Drive API
+    implementation 'com.google.apis:google-api-services-drive:v3-rev20251019-2.0.0'
+
+    // Google OAuth Client
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.34.1'
+
+    // Google HTTP Client
+    implementation 'com.google.http-client:google-http-client-jackson2:1.43.3'
+
+    implementation 'com.google.api-client:google-api-client:2.0.0'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.34.1'
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-context-indexer
+    annotationProcessor 'org.springframework:spring-context-indexer:7.0.1'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+spotless {
+    java {
+        palantirJavaFormat('2.50.0')
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+kotlin {
+    jvmToolchain(19)
+}

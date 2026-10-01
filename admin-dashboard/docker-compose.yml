@@ -1,0 +1,14 @@
+services:
+  admin-dashboard:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_ENABLE_DEV: ${NEXT_PUBLIC_ENABLE_DEV}
+        NEXT_PUBLIC_ENABLE_STAGE: ${NEXT_PUBLIC_ENABLE_STAGE}
+        NEXT_PUBLIC_ENABLE_PROD: ${NEXT_PUBLIC_ENABLE_PROD}
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    restart: always

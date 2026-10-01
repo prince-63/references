@@ -1,0 +1,100 @@
+2025-08-12T16:16:21,337+0530 [46522 1] com.newrelic INFO: Writing to New Relic log file: /Users/ashishpathak/ds/patient-service/newrelic/logs/newrelic_agent.log
+2025-08-12T16:16:21,338+0530 [46522 1] com.newrelic INFO: JRE vendor Homebrew version 17.0.14
+2025-08-12T16:16:21,338+0530 [46522 1] com.newrelic INFO: JVM vendor Homebrew OpenJDK 64-Bit Server VM version 17.0.14+0
+2025-08-12T16:16:21,338+0530 [46522 1] com.newrelic INFO: OS Mac OS X version 15.3.1 arch aarch64
+2025-08-12T16:16:21,338+0530 [46522 1] com.newrelic INFO: Agent Host: ip-192-168-18-65.ap-south-1.compute.internal IP: 192.168.18.65
+2025-08-12T16:16:21,338+0530 [46522 1] com.newrelic INFO: New Relic Agent v8.22.0 is initializing...
+2025-08-12T16:16:22,069+0530 [46522 22] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2025-08-12T16:16:22,655+0530 [46522 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2025-08-12T16:16:22,862+0530 [46522 1] com.newrelic INFO: Setting audit_mode to false
+2025-08-12T16:16:22,928+0530 [46522 36] com.newrelic WARN: Failed to validate Azure App Services value
+2025-08-12T16:16:22,945+0530 [46522 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /Users/ashishpathak/ds/patient-service/newrelic/./newrelic.yml
+2025-08-12T16:16:22,947+0530 [46522 1] com.newrelic INFO: New Relic Agent v8.22.0 has started
+2025-08-12T16:16:22,948+0530 [46522 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@f2a0b8e
+2025-08-12T16:16:22,948+0530 [46522 1] com.newrelic INFO: Premain startup complete in 3,311ms
+2025-08-12T16:16:22,949+0530 [46522 1] com.newrelic INFO: New Relic Security is completely disabled by one of the user provided config `security.enabled`, `security.agent.enabled` or `high_security`. Not loading security capabilities.
+2025-08-12T16:16:23,248+0530 [46522 15] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2025-08-12T16:16:23,250+0530 [46522 15] com.newrelic.agent.core.CoreServiceImpl INFO: New Relic Agent has shutdown
+2025-08-12T16:26:43,498+0530 [51893 1] com.newrelic INFO: Writing to New Relic log file: /Users/ashishpathak/ds/patient-service/newrelic/logs/newrelic_agent.log
+2025-08-12T16:26:43,498+0530 [51893 1] com.newrelic INFO: JRE vendor Homebrew version 17.0.14
+2025-08-12T16:26:43,498+0530 [51893 1] com.newrelic INFO: JVM vendor Homebrew OpenJDK 64-Bit Server VM version 17.0.14+0
+2025-08-12T16:26:43,498+0530 [51893 1] com.newrelic INFO: OS Mac OS X version 15.3.1 arch aarch64
+2025-08-12T16:26:43,498+0530 [51893 1] com.newrelic INFO: Agent Host: ip-192-168-18-65.ap-south-1.compute.internal IP: 192.168.18.65
+2025-08-12T16:26:43,498+0530 [51893 1] com.newrelic INFO: New Relic Agent v8.22.0 is initializing...
+2025-08-12T16:26:43,805+0530 [51893 22] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2025-08-12T16:26:44,391+0530 [51893 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2025-08-12T16:26:44,539+0530 [51893 1] com.newrelic INFO: Setting audit_mode to false
+2025-08-12T16:26:44,600+0530 [51893 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /Users/ashishpathak/ds/patient-service/newrelic/./newrelic.yml
+2025-08-12T16:26:44,602+0530 [51893 1] com.newrelic INFO: New Relic Agent v8.22.0 has started
+2025-08-12T16:26:44,602+0530 [51893 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@f2a0b8e
+2025-08-12T16:26:44,602+0530 [51893 1] com.newrelic INFO: Premain startup complete in 1,610ms
+2025-08-12T16:26:44,603+0530 [51893 1] com.newrelic INFO: New Relic Security is completely disabled by one of the user provided config `security.enabled`, `security.agent.enabled` or `high_security`. Not loading security capabilities.
+2025-08-12T16:26:44,790+0530 [51893 36] com.newrelic WARN: Failed to validate Azure App Services value
+2025-08-12T16:26:44,807+0530 [51893 15] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2025-08-12T16:26:44,807+0530 [51893 15] com.newrelic.agent.core.CoreServiceImpl INFO: New Relic Agent has shutdown
+2025-08-12T16:27:17,951+0530 [52144 1] com.newrelic INFO: Writing to New Relic log file: /Users/ashishpathak/ds/patient-service/newrelic/logs/newrelic_agent.log
+2025-08-12T16:27:17,951+0530 [52144 1] com.newrelic INFO: JRE vendor Homebrew version 21.0.8
+2025-08-12T16:27:17,951+0530 [52144 1] com.newrelic INFO: JVM vendor Homebrew OpenJDK 64-Bit Server VM version 21.0.8
+2025-08-12T16:27:17,951+0530 [52144 1] com.newrelic INFO: OS Mac OS X version 15.3.1 arch aarch64
+2025-08-12T16:27:17,951+0530 [52144 1] com.newrelic INFO: Agent Host: ip-192-168-18-65.ap-south-1.compute.internal IP: 192.168.18.65
+2025-08-12T16:27:17,951+0530 [52144 1] com.newrelic INFO: New Relic Agent v8.22.0 is initializing...
+2025-08-12T16:27:18,247+0530 [52144 35] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2025-08-12T16:27:18,725+0530 [52144 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2025-08-12T16:27:18,858+0530 [52144 1] com.newrelic INFO: Setting audit_mode to false
+2025-08-12T16:27:18,933+0530 [52144 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /Users/ashishpathak/ds/patient-service/newrelic/./newrelic.yml
+2025-08-12T16:27:18,936+0530 [52144 1] com.newrelic INFO: New Relic Agent v8.22.0 has started
+2025-08-12T16:27:18,936+0530 [52144 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@3830f1c0
+2025-08-12T16:27:18,936+0530 [52144 1] com.newrelic INFO: Premain startup complete in 1,453ms
+2025-08-12T16:27:18,937+0530 [52144 1] com.newrelic INFO: New Relic Security is completely disabled by one of the user provided config `security.enabled`, `security.agent.enabled` or `high_security`. Not loading security capabilities.
+2025-08-12T16:27:19,083+0530 [52144 49] com.newrelic WARN: Failed to validate Azure App Services value
+2025-08-12T16:27:24,374+0530 [52144 1] com.newrelic INFO: Server Info: Apache Tomcat/10.1.4
+2025-08-12T16:27:49,060+0530 [52144 54] com.newrelic INFO: Host name is ip-192-168-18-65.ap-south-1.compute.internal, display host ip-192-168-18-65.ap-south-1.compute.internal for application DentalStack (Staging)
+2025-08-12T16:27:49,071+0530 [52144 54] com.newrelic INFO: New Relic JFR Monitor is disabled: JFR config has not been enabled in the Java agent.
+2025-08-12T16:27:50,108+0530 [52144 54] com.newrelic INFO: Collector redirection to collector.newrelic.com:443
+2025-08-12T16:27:51,941+0530 [52144 54] com.newrelic INFO: Max payload size is 1,000,000 bytes
+2025-08-12T16:27:51,941+0530 [52144 54] com.newrelic INFO: Agent run id: BTF28RLnbSVcAEAwBz3KHydomx50AAIBAAAnIQEAAMuwAgQ9y0yXAwAGOC4yMi4wACxpcC0xOTItMTY4LTE4LTY1LmFwLXNvdXRoLTEuY29tcHV0ZS5pbnRlcm5hbAAVRGVudGFsU3RhY2sgKFN0YWdpbmcp
+2025-08-12T16:27:51,944+0530 [52144 54] com.newrelic INFO: Agent 52144@ip-192-168-18-65.ap-south-1.compute.internal/DentalStack (Staging) connected to collector.newrelic.com:443
+2025-08-12T16:27:51,946+0530 [52144 54] com.newrelic INFO: Reporting to: https://rpm.newrelic.com/accounts/4206599/applications/1036733591
+2025-08-12T16:27:51,955+0530 [52144 54] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2025-08-12T16:27:51,955+0530 [52144 54] com.newrelic INFO: Using default metric ingest URI: https://metric-api.newrelic.com/metric/v1
+2025-08-12T16:27:51,955+0530 [52144 54] com.newrelic INFO: Using default event ingest URI: https://insights-collector.newrelic.com/v1/accounts/events
+2025-08-12T16:27:51,957+0530 [52144 54] com.newrelic INFO: Using default collector host: collector.newrelic.com
+2025-08-12T16:27:51,957+0530 [52144 54] com.newrelic INFO: Using default metric ingest URI: https://metric-api.newrelic.com/metric/v1
+2025-08-12T16:27:51,957+0530 [52144 54] com.newrelic INFO: Using default event ingest URI: https://insights-collector.newrelic.com/v1/accounts/events
+2025-08-12T16:27:52,755+0530 [52144 54] com.newrelic INFO: Real user monitoring is enabled for application DentalStack (Staging). Auto instrumentation is enabled.
+2025-08-12T16:27:52,755+0530 [52144 54] com.newrelic INFO: New Relic JFR Monitor is disabled: JFR config has not been enabled in the Java agent.
+2025-08-12T16:31:20,110+0530 [52144 26] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2025-08-12T17:23:48,969+0530 [71565 1] com.newrelic INFO: Writing to New Relic log file: /Users/ashishpathak/ds/doctor-service/newrelic/logs/newrelic_agent.log
+2025-08-12T17:23:48,970+0530 [71565 1] com.newrelic INFO: JRE vendor Homebrew version 21.0.8
+2025-08-12T17:23:48,970+0530 [71565 1] com.newrelic INFO: JVM vendor Homebrew OpenJDK 64-Bit Server VM version 21.0.8
+2025-08-12T17:23:48,970+0530 [71565 1] com.newrelic INFO: OS Mac OS X version 15.3.1 arch aarch64
+2025-08-12T17:23:48,970+0530 [71565 1] com.newrelic INFO: Agent Host: ip-192-168-18-65.ap-south-1.compute.internal IP: 192.168.18.65
+2025-08-12T17:23:48,970+0530 [71565 1] com.newrelic INFO: New Relic Agent v8.22.0 is initializing...
+2025-08-12T17:23:49,353+0530 [71565 35] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2025-08-12T17:23:49,932+0530 [71565 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2025-08-12T17:23:50,104+0530 [71565 1] com.newrelic INFO: Setting audit_mode to false
+2025-08-12T17:23:50,172+0530 [71565 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /Users/ashishpathak/ds/doctor-service/newrelic/./newrelic.yml
+2025-08-12T17:23:50,175+0530 [71565 1] com.newrelic INFO: New Relic Agent v8.22.0 has started
+2025-08-12T17:23:50,175+0530 [71565 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@3830f1c0
+2025-08-12T17:23:50,175+0530 [71565 1] com.newrelic INFO: Premain startup complete in 1,961ms
+2025-08-12T17:23:50,176+0530 [71565 1] com.newrelic INFO: New Relic Security is completely disabled by one of the user provided config `security.enabled`, `security.agent.enabled` or `high_security`. Not loading security capabilities.
+2025-08-12T17:23:50,395+0530 [71565 49] com.newrelic WARN: Failed to validate Azure App Services value
+2025-08-12T17:23:53,131+0530 [71565 1] com.newrelic INFO: Server Info: Apache Tomcat/10.1.4
+2025-08-12T17:23:53,559+0530 [71565 26] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down
+2025-08-12T17:24:31,456+0530 [71783 1] com.newrelic INFO: Writing to New Relic log file: /Users/ashishpathak/ds/doctor-service/newrelic/logs/newrelic_agent.log
+2025-08-12T17:24:31,457+0530 [71783 1] com.newrelic INFO: JRE vendor Homebrew version 21.0.8
+2025-08-12T17:24:31,457+0530 [71783 1] com.newrelic INFO: JVM vendor Homebrew OpenJDK 64-Bit Server VM version 21.0.8
+2025-08-12T17:24:31,457+0530 [71783 1] com.newrelic INFO: OS Mac OS X version 15.3.1 arch aarch64
+2025-08-12T17:24:31,457+0530 [71783 1] com.newrelic INFO: Agent Host: ip-192-168-18-65.ap-south-1.compute.internal IP: 192.168.18.65
+2025-08-12T17:24:31,457+0530 [71783 1] com.newrelic INFO: New Relic Agent v8.22.0 is initializing...
+2025-08-12T17:24:31,791+0530 [71783 35] com.newrelic INFO: Instrumentation com.newrelic.instrumentation.jdbc-resultset is disabled. Skipping.
+2025-08-12T17:24:32,248+0530 [71783 1] com.newrelic.agent.RPMServiceManagerImpl INFO: Configured to connect to New Relic at collector.newrelic.com:443
+2025-08-12T17:24:32,390+0530 [71783 1] com.newrelic INFO: Setting audit_mode to false
+2025-08-12T17:24:32,460+0530 [71783 1] com.newrelic.agent.config.ConfigServiceImpl INFO: Configuration file is /Users/ashishpathak/ds/doctor-service/newrelic/./newrelic.yml
+2025-08-12T17:24:32,462+0530 [71783 1] com.newrelic INFO: New Relic Agent v8.22.0 has started
+2025-08-12T17:24:32,462+0530 [71783 1] com.newrelic INFO: Agent class loader: com.newrelic.bootstrap.BootstrapAgent$JVMAgentClassLoader@3830f1c0
+2025-08-12T17:24:32,462+0530 [71783 1] com.newrelic INFO: Premain startup complete in 1,634ms
+2025-08-12T17:24:32,463+0530 [71783 1] com.newrelic INFO: New Relic Security is completely disabled by one of the user provided config `security.enabled`, `security.agent.enabled` or `high_security`. Not loading security capabilities.
+2025-08-12T17:24:32,616+0530 [71783 49] com.newrelic WARN: Failed to validate Azure App Services value
+2025-08-12T17:24:35,569+0530 [71783 1] com.newrelic INFO: Server Info: Apache Tomcat/10.1.4
+2025-08-12T17:24:44,684+0530 [71783 26] com.newrelic.agent.core.CoreServiceImpl INFO: JVM is shutting down

@@ -1,0 +1,9 @@
+export default {
+  OVERVIEW: 'OVERVIEW',
+  USERS: 'USER',
+  LABS: 'LABS',
+  ROLES: 'ROLES',
+  AUDIT: 'AUDIT',
+  CONNECTED_LABS: 'CONNECTED_LABS',
+  INVITATION: 'INVITATION',
+} as const

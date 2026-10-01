@@ -1,0 +1,19 @@
+{
+  "previewVisibility": {
+    "patientName": true,
+    "gender": true,
+    "age": true,
+    "patientId": false,
+    "practiceName": true,
+    "product": true,
+    "orderCreated": true,
+    "caseType": false,
+    "assignee": false,
+    "commentsCount": true,
+    "priority": true,
+    "labels": true,
+    "linkedPlans": true,
+    "linkedBatch": true,
+    "daysInStage": true
+  }
+}

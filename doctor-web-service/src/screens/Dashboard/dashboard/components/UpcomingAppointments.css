@@ -1,0 +1,10 @@
+.calendar-container .fc {
+  height: 400px !important;
+  width: 100%;
+  overflow: auto;
+  box-sizing: border-box;
+}
+.calendar-container .fc-theme-standard .fc-list {
+  border: none !important;
+  border-radius: 8px;
+}

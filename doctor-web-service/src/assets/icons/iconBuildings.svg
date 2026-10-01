@@ -1,0 +1,52 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="20" height="20" fill="#D2D2D2"/>
+<g id="Treatment overview">
+<path d="M-1309 -638C-1309 -639.105 -1308.1 -640 -1307 -640H2998C2999.1 -640 3000 -639.105 3000 -638V838C3000 839.105 2999.1 840 2998 840H-1307C-1308.1 840 -1309 839.105 -1309 838V-638Z" fill="#C9C9C9"/>
+<path d="M-1307 -639H2998V-641H-1307V-639ZM2999 -638V838H3001V-638H2999ZM2998 839H-1307V841H2998V839ZM-1308 838V-638H-1310V838H-1308ZM-1307 839C-1307.55 839 -1308 838.552 -1308 838H-1310C-1310 839.657 -1308.66 841 -1307 841V839ZM2999 838C2999 838.552 2998.55 839 2998 839V841C2999.66 841 3001 839.657 3001 838H2999ZM2998 -639C2998.55 -639 2999 -638.552 2999 -638H3001C3001 -639.657 2999.66 -641 2998 -641V-639ZM-1307 -641C-1308.66 -641 -1310 -639.657 -1310 -638H-1308C-1308 -638.552 -1307.55 -639 -1307 -639V-641Z" fill="black" fill-opacity="0.4"/>
+<g id="Full-fledged" clip-path="url(#clip0_5423_2325)">
+<rect width="1920" height="1080" transform="translate(-1109 -440)" fill="white"/>
+<g id="Rectangle 24582" filter="url(#filter0_d_5423_2325)">
+<rect x="-395" y="-349" width="1086" height="930" rx="8" fill="white"/>
+</g>
+<g id="Frame 1000003310">
+<rect x="-15.5" y="-147.5" width="681" height="183" rx="7.5" fill="white"/>
+<rect x="-15.5" y="-147.5" width="681" height="183" rx="7.5" stroke="#D9D9D9"/>
+<g id="Frame 1000003591">
+<g id="Frame 1000003589">
+<g id="Frame 1000003311" clip-path="url(#clip1_5423_2325)">
+<g id="Buildings" clip-path="url(#clip2_5423_2325)">
+<path id="Vector" d="M10.625 16.8785V2.50353C10.6249 2.39042 10.5942 2.27945 10.536 2.18244C10.4778 2.08544 10.3944 2.00604 10.2946 1.95272C10.1949 1.89939 10.0825 1.87414 9.96956 1.87965C9.85658 1.88516 9.74722 1.92122 9.65313 1.984L3.40313 6.15041C3.3174 6.2076 3.24715 6.28511 3.19862 6.37602C3.1501 6.46694 3.12481 6.56845 3.125 6.6715V16.8785" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M10.625 6.875H16.25C16.4158 6.875 16.5747 6.94085 16.6919 7.05806C16.8092 7.17527 16.875 7.33424 16.875 7.5V16.875" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M1.25 16.8789H18.75" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M8.125 8.75V10" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M5.625 8.75V10" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M5.625 13.1289V14.3789" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M8.125 13.1289V14.3789" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_5423_2325" x="-429" y="-383" width="1154" height="998" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="17"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.0588 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_5423_2325"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_5423_2325" result="shape"/>
+</filter>
+<clipPath id="clip0_5423_2325">
+<rect width="1920" height="1080" fill="white" transform="translate(-1109 -440)"/>
+</clipPath>
+<clipPath id="clip1_5423_2325">
+<rect width="325" height="20" fill="white"/>
+</clipPath>
+<clipPath id="clip2_5423_2325">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>

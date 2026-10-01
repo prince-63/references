@@ -1,0 +1,4 @@
+export default {
+  ALIGNER_ORDER: 'ALIGNER_ORDER',
+  PLANNING_ORDER: 'PLANNING_ORDER',
+} as const

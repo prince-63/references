@@ -1,0 +1,40 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:react/recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "plugins": ["@typescript-eslint", "react"],
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {"moduleDirectory": ["node_modules", "src/"]}
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "rules": {
+    // Add or override rules as needed
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-console": ["warn", {"allow": ["error"]}],
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/no-unescaped-entities": "off"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "build",
+    "public",
+    "*.css",
+    "*.html",
+    "*.svg",
+    "*.png",
+    "*.ttf",
+    "*.jpg",
+    "*.jpeg"
+  ]
+}

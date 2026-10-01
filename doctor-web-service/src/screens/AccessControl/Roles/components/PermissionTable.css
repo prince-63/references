@@ -1,0 +1,52 @@
+.permission-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: figtree;
+}
+
+/* Header */
+.permission-table thead th {
+  background-color: #f5f5f5; /* matches screenshot */
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 12px;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+.permission-table .module-header {
+  text-align: left;
+}
+
+/* Add only header column dividers */
+.permission-table thead th:not(:first-child) {
+  border-left: 1px solid #d9d9d9;
+}
+
+/* Body cells */
+.permission-table tbody td {
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 12px;
+  text-align: center;
+  border: none;
+}
+
+.permission-table .module-name {
+  text-align: left;
+}
+
+/* NA text style */
+.na-text {
+  color: #555;
+  font-size: 12px;
+}
+
+/* Optional row hover */
+.permission-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+.permission-table tbody tr {
+  border-bottom: 1px solid #d9d9d9;
+}

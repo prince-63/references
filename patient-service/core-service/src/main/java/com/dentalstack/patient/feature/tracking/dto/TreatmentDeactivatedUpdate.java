@@ -1,0 +1,38 @@
+package com.dentalstack.patient.feature.tracking.dto;
+
+import com.dentalstack.patient.feature.aligner.dto.aligner.AlignerJourneyDetails;
+import com.dentalstack.patient.feature.patient.entity.Patient;
+import com.dentalstack.patient.feature.timeline.dto.Update;
+import com.dentalstack.patient.feature.timeline.entity.Event;
+import com.dentalstack.patient.feature.timeline.metadata.event.TreatmentDeactivatedEventMetaData;
+import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
+@Data
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class TreatmentDeactivatedUpdate extends Update implements Serializable {
+
+    private AlignerJourneyDetails alignerJourneyDetails;
+
+    public static TreatmentDeactivatedUpdate from(Event event, Patient patient) {
+        var metadata = (TreatmentDeactivatedEventMetaData) event.getMetadata();
+        return TreatmentDeactivatedUpdate.builder()
+                .eventId(event.getId())
+                .patientId(patient.getId())
+                .eventType(event.getType())
+                .eventAt(event.getCreatedAt())
+                .patientName(patient.fullName())
+                .patientProfileImageUrl(patient.getProfilePictureUrl())
+                .active(event.isActive())
+                .read(event.isRead())
+                .alignerJourneyDetails(metadata.getAlignerJourneyDetails())
+                .build();
+    }
+}

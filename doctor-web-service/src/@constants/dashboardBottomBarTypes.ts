@@ -1,0 +1,9 @@
+export default {
+  DASHBOARD: 'DASHBOARD',
+  PATIENTS: 'PATIENTS',
+  CHATS: 'CHATS',
+  MORE: 'MORE',
+  PRACTICES: 'PRACTICES',
+  ORDERS: 'ORDERS',
+  USERS: 'USERS',
+} as const

@@ -1,0 +1,16 @@
+# Secrets / credentials
+*.env
+*.env.*
+!*.env.example
+
+client_secret_*.json
+credentials.json
+
+# IDE
+.idea/
+.vscode/
+
+# Build
+target/
+build/
+*.class

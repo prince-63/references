@@ -1,0 +1,9 @@
+package com.dentalstack.patient.feature.reminder.entity;
+
+public enum ReminderPurpose {
+    PAYMENTS_PENDING,
+    PRODUCTION_ALIGNER_STATUS_PENDING,
+    GENERAL_REMINDER,
+    APPOINTMENT,
+    APPOINTMENT_REMINDER
+}

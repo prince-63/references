@@ -1,0 +1,30 @@
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import './index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
+import './services/firebase'
+import generateCssVariables from './utils/generateCssVariables'
+import getBrandConfig from 'utils/getBrandConfig'
+
+generateCssVariables()
+
+const brandConfig = getBrandConfig()
+document.title = brandConfig.name
+
+// Add favicon
+const link = document.createElement('link')
+link.rel = 'icon'
+link.href = brandConfig.favIcon
+document.head.appendChild(link)
+
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
+root.render(
+  // <React.StrictMode>
+  <App />
+  // </React.StrictMode>
+)
+
+// If you want to start measuring performance in your app, pass a function
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals()

@@ -1,0 +1,40 @@
+package com.dentalstack.patient.feature.timeline.dto.laborder;
+
+import com.dentalstack.patient.feature.patient.entity.Patient;
+import com.dentalstack.patient.feature.timeline.dto.Update;
+import com.dentalstack.patient.feature.timeline.entity.Event;
+import com.dentalstack.patient.feature.timeline.metadata.event.laborder.ThirdPartyCustomerSendCaseMetadata;
+import java.io.Serializable;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.experimental.SuperBuilder;
+
+@Data
+@SuperBuilder
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
+public class ThirdPartyCustomerSendCaseUpdate extends Update implements Serializable {
+
+    private Long patientId;
+    private String customerDisplayName;
+    private String orderId;
+
+    public static ThirdPartyCustomerSendCaseUpdate from(Event event, Patient patient) {
+        var metadata = (ThirdPartyCustomerSendCaseMetadata) event.getMetadata();
+        return ThirdPartyCustomerSendCaseUpdate.builder()
+                .eventId(event.getId())
+                .eventType(event.getType())
+                .eventAt(event.getCreatedAt())
+                .patientName(patient.fullName())
+                .patientProfileImageUrl(patient.getProfilePictureUrl())
+                .active(event.isActive())
+                .read(event.isRead())
+                .patientId(patient.getId())
+                .orderId(metadata.getOrderId())
+                .customerDisplayName(metadata.getCustomerDisplayName())
+                .build();
+    }
+}

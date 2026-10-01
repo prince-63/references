@@ -1,0 +1,28 @@
+.cross-platform {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+.cross-platform__message {
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.cross-platform__spinner {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3px solid #ccc;
+  border-top-color: #333;
+  animation: cross-platform-spin 0.8s linear infinite;
+}
+
+@keyframes cross-platform-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

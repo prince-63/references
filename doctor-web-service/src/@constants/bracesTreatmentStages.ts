@@ -1,0 +1,8 @@
+export default {
+  NOT_SELECTED: 'NOT SELECTED',
+  ACTIVE: 'ACTIVE',
+  UPCOMING: 'UPCOMING',
+  DRAFT: 'DRAFT',
+  OVERDUE: 'OVERDUE',
+  ALL: 'ALL',
+} as const

@@ -1,0 +1,12 @@
+/* Default tabs: keep layout minimal to avoid extra whitespace */
+.details-tabs .ant-tabs-content-holder {
+  display: block;
+}
+
+/* Editor routes (Add/Edit Prescription): full-height flex layout */
+.prescription-tabs-full {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}

@@ -1,0 +1,15 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="CircleDashed" clip-path="url(#clip0_9723_567)">
+<path id="Vector" d="M8.125 2.73551C9.35462 2.41629 10.6454 2.41629 11.875 2.73551" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M2.77246 7.99102C3.11102 6.76682 3.75638 5.64927 4.64746 4.74414" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M4.64746 15.2563C3.75615 14.3507 3.11078 13.2326 2.77246 12.0078" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_4" d="M11.875 17.2656C10.6454 17.5848 9.35462 17.5848 8.125 17.2656" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M17.2275 12.0078C16.889 13.232 16.2436 14.3496 15.3525 15.2547" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_6" d="M15.3525 4.74414C16.2438 5.64971 16.8892 6.76782 17.2275 7.99258" stroke="#666666" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<clipPath id="clip0_9723_567">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>

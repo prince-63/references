@@ -1,0 +1,6 @@
+export default {
+  ALL: 'ALL',
+  ALIGNER_CHANGE: 'ALIGNER_CHANGE',
+  CHECK_IN: 'CHECK_IN',
+  ISSUE_REPORT: 'ISSUE_REPORT',
+} as const

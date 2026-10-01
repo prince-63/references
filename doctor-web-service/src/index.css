@@ -1,0 +1,862 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fonts are now loaded via <link> in index.html with font-display: swap for better performance */
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Figtree', sans-serif !important;
+}
+/* Avoid fixed zoom on small screens to keep layout crisp */
+@media (max-width: 640px) {
+  #main-layout {
+    zoom: 100%;
+  }
+}
+textarea {
+  resize: none;
+}
+.curved-table {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden;
+}
+.group:hover .group-hover\:block {
+  display: block;
+}
+.curved-table th {
+  background-color: #f2f2f2;
+}
+
+/* Sticky header support for production list */
+.sticky-header-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: visible !important; /* override .curved-table overflow: hidden */
+}
+.sticky-header-table thead {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.sticky-header-table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+@media (max-width: 640px) {
+  .custom-datePicker-popup {
+    max-width: 90%; /* Ensure the popup takes the full width on small screens */
+    overflow-x: auto;
+  }
+}
+
+.stl-viewer > div > div > canvas {
+  width: 100% !important;
+}
+
+.react-geosuggest__input {
+  height: 48px;
+  font-size: 16px;
+}
+
+/* Scroll bars (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #666666;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+@media (max-width: 768px) {
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  ::-webkit-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+/* Google Search */
+.google-search-bar .css-1u9des2-indicatorSeparator {
+  display: none;
+}
+.google-search-bar .css-tj5bde-Svg {
+  display: none;
+}
+.google-search-bar .css-1imcndr-Input {
+  padding-left: 30px;
+  margin-left: 0px;
+}
+
+.google-search-bar .css-1jqq78o-placeholder {
+  padding-left: 20px;
+}
+.google-search-bar .css-1imcndr-Input {
+  padding-left: 20px;
+}
+.google-search-bar #react-select-3-input {
+  padding-left: 20px;
+}
+.google-search-bar .css-1dimb5e-singleValue {
+  padding-left: 20px;
+}
+.google-search-bar .css-t3ipsp-control {
+  padding-left: 10px;
+}
+
+.dropdownRadio ::-webkit-scrollbar-thumb {
+  background: var(--primary-color) !important; /* color of the thumb */
+  border-radius: 6px; /* roundness of the thumb */
+}
+.ant-btn-primary {
+  box-shadow: none;
+}
+.ant-btn:hover {
+  background-color: var(--primary-color) !important;
+}
+.delete-file .ant-btn:hover {
+  background-color: #f45045 !important;
+}
+.show-profile .ant-btn:hover {
+  background-color: #fff !important;
+  color: #666666 !important;
+}
+
+.edit-reminder .ant-btn:hover {
+  background-color: #fff !important;
+  color: #0095ff !important;
+}
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  outline: none;
+}
+
+.custom-checkbox:checked {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.custom-checkbox:not(:checked) {
+  border: 1px solid #d9d9d9;
+}
+
+.custom-checkbox:checked::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: relative;
+  top: 1px;
+  left: 4px;
+}
+
+.ant-pagination .ant-pagination-item-active {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color);
+  border-radius: 8px;
+}
+.ant-pagination .ant-pagination-item-active a {
+  color: #fff !important;
+}
+
+.ant-pagination .ant-pagination-item-active:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+/* write for hover as well */
+.ant-pagination .ant-pagination-item-active:hover a {
+  color: #fff;
+}
+.ant-pagination .ant-pagination-item {
+  border-radius: 8px;
+  border-color: #f5f4fe;
+  background-color: #f5f4fe;
+}
+.ant-pagination .ant-pagination-item:hover {
+  border-radius: 8px;
+  border-color: #f5f4fe;
+  background-color: #f5f4fe;
+}
+.ant-pagination .ant-pagination-item a {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.hide-pagination .ant-pagination .ant-pagination-item {
+  display: none;
+}
+.hide-pagination .ant-pagination-prev {
+  display: none;
+}
+.hide-pagination .ant-pagination-next {
+  display: none;
+}
+.hide-pagination
+  .ant-pagination
+  .ant-pagination-jump-next
+  .ant-pagination-item-container
+  .ant-pagination-item-ellipsis {
+  display: none;
+}
+.hide-pagination .ant-pagination-item-link {
+  display: none;
+}
+.hide-pagination .ant-pagination .ant-pagination-jump-prev {
+  display: none;
+}
+.hide-pagination .ant-pagination .ant-pagination-jump-next {
+  display: none;
+}
+
+.isDisabled .ant-btn:hover {
+  background-color: #a2a2a2;
+}
+.disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+/* Checkbox green */
+.green-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+  margin-top: 3px;
+}
+
+.green-checkbox:checked {
+  background-color: #00b383;
+  border: 1px solid #00b383;
+  box-sizing: border-box;
+  margin-top: 3px;
+}
+
+.green-checkbox:checked {
+  background-color: #24968b;
+  border: 1px solid #24968b;
+}
+
+.green-checkbox:not(:checked) {
+  border: 1px solid #d9d9d9;
+}
+
+.green-checkbox:checked::after {
+  /* Disabled the pseudo-element checkmark to avoid double checkmarks.
+     We use the SVG background-image for the visible checkmark instead. */
+  display: none;
+}
+/* Ensure disabled state appears muted across the app */
+.green-checkbox:disabled {
+  cursor: not-allowed;
+  background-color: #f3f4f6; /* light gray for unchecked disabled */
+  border: 1px solid #e5e7eb; /* muted border */
+  box-sizing: border-box;
+}
+
+.green-checkbox:disabled:checked {
+  background-color: #d1d5db; /* slightly darker gray when checked */
+  border-color: #d1d5db;
+}
+
+.green-checkbox:disabled::after,
+.green-checkbox:disabled:checked::after {
+  border-color: #9ca3af; /* muted check mark color */
+}
+
+/* Stronger rules using input selector and attribute selector to win over utility classes */
+input.green-checkbox[disabled],
+input.green-checkbox:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  background-color: #f3f4f6 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+input.green-checkbox[disabled]:checked,
+input.green-checkbox:disabled:checked {
+  background-color: #d1d5db !important;
+  border-color: #d1d5db !important;
+}
+
+input.green-checkbox[disabled]::after,
+input.green-checkbox:disabled::after,
+input.green-checkbox[disabled]:checked::after,
+input.green-checkbox:disabled:checked::after {
+  border-color: #9ca3af !important;
+}
+
+/* Fallback: use inline SVG background checkmark so it renders even if ::after on inputs isn't supported */
+.green-checkbox {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+}
+
+.green-checkbox:checked {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'><path d='M1 5.2 L4.2 8.4 L11 1.6' stroke='%23ffffff' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+input.green-checkbox[disabled]:checked,
+input.green-checkbox:disabled:checked,
+.green-checkbox[disabled]:checked {
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'><path d='M1 5.2 L4.2 8.4 L11 1.6' stroke='%239ca3af' stroke-width='2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+}
+
+/* Catch cases where utility classes add cursor/pointer styles on the input or parent by using a substring class selector */
+.green-checkbox[disabled],
+input[class*='green-checkbox'][disabled],
+input[class*='green-checkbox']:disabled {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+  background-color: #f3f4f6 !important;
+  border: 1px solid #e5e7eb !important;
+}
+
+.green-checkbox[disabled]:checked,
+input[class*='green-checkbox'][disabled]:checked,
+input[class*='green-checkbox']:disabled:checked {
+  background-color: #d1d5db !important;
+  border-color: #d1d5db !important;
+}
+
+.green-checkbox[disabled]::after,
+input[class*='green-checkbox'][disabled]::after,
+.green-checkbox[disabled]:checked::after,
+input[class*='green-checkbox'][disabled]:checked::after {
+  border-color: #9ca3af !important;
+}
+.primary-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  outline: none;
+  box-sizing: border-box;
+  margin-top: 3px;
+}
+
+.primary-checkbox:checked {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+}
+
+.primary-checkbox:checked {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.primary-checkbox:not(:checked) {
+  border: 1px solid #b0b0b0;
+}
+
+.primary-checkbox:checked::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  position: relative;
+  top: 2px;
+  left: 5px;
+}
+
+.primary-checkbox:indeterminate {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.primary-checkbox:indeterminate::after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 2px;
+  background-color: #fff;
+  position: relative;
+  top: 7px;
+  left: 3px;
+}
+
+#green-checkbox-registration:checked::after {
+  /* Prevent the ::after checkmark for this ID to avoid duplicating the SVG checkmark */
+  display: none;
+}
+
+#green-checkbox-setup:checked::after {
+  /* Prevent the ::after checkmark for this ID to avoid duplicating the SVG checkmark */
+  display: none;
+}
+
+.ant-breadcrumb a:hover {
+  background-color: transparent;
+}
+.react-select__menu {
+  max-height: 200px; /* Set the maximum height as needed */
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+.sidebar .ant-menu-item-group-title {
+  font-weight: 300 !important;
+}
+
+.sidebar .ant-menu-inline-collapsed .ant-menu-item {
+  width: 86px !important;
+  height: 44px !important;
+  align-items: center !important;
+  /* background-color: red !important; */
+}
+
+.react-select__menu {
+  max-height: 200px; /* Set the maximum height as needed */
+}
+
+.ant-btn {
+  font-family: 'Figtree', sans-serif;
+}
+
+.ant-custom .ant-btn:hover {
+  background-color: inherit !important;
+}
+
+@media (max-width: 767px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+.hiddenScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hiddenScrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.custom-date-input {
+  -webkit-appearance: none; /* Remove default styling on iOS */
+  -moz-appearance: none;
+  appearance: none;
+  border: 1px solid #d9d9d9; /* Set your desired border */
+  border-radius: 4px; /* Set your desired border radius */
+  padding: 10px; /* Adjust padding */
+  font-size: 16px; /* Set a consistent font size */
+  outline: none; /* Remove outline */
+  transition: border-color 0.3s; /* Optional transition effect */
+}
+
+.custom-date-input:focus {
+  border-color: #007bff; /* Change border color on focus */
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Optional shadow on focus */
+}
+
+/* Prevent auto-capitalization and auto-correction */
+.custom-date-input {
+  text-transform: none; /* Prevent capitalizing */
+  -webkit-user-select: text; /* Allow text selection */
+  user-select: text; /* Add standard property for compatibility */
+  -webkit-autocorrect: off; /* Turn off autocorrect */
+  -webkit-autocapitalize: off; /* Turn off autocapitalize */
+}
+
+input.custom-date-input:disabled + .custom-date-input-label {
+  color: #898989;
+  background-color: #efefef !important;
+}
+
+.custom-date-input:disabled {
+  background-color: #efefef !important;
+}
+
+/* Ant Design Steps */
+
+.steps-with-custom-finish .ant-steps-item-finish .ant-steps-item-icon {
+  background-color: #00b383 !important;
+  border-color: #00b383 !important;
+}
+
+.steps-with-custom-finish .ant-steps-item-finish .ant-steps-icon {
+  color: white !important;
+}
+
+.steps-with-custom-finish .ant-steps-item-process .ant-steps-item-icon {
+  background-color: #00b383 !important;
+  border-color: #00b383 !important;
+}
+
+.steps-with-custom-finish .ant-steps-item-finish .ant-steps-item-tail::after {
+  background-color: #00b383 !important;
+}
+
+/* Additional styles to ensure override */
+.steps-with-custom-finish
+  .ant-steps-item-finish
+  > .ant-steps-item-container
+  > .ant-steps-item-icon {
+  background-color: #00b383 !important;
+  border-color: #00b383 !important;
+}
+
+/* Enforce the style for the checkmark */
+.steps-with-custom-finish .ant-steps-item-finish .ant-steps-finish-icon svg {
+  color: white !important;
+}
+/* For active/current step */
+.custom-step-style .ant-steps-item-process .ant-steps-icon {
+  background-color: #735bf2 !important;
+  border-color: #735bf2 !important;
+}
+
+/* Optional: For finished steps */
+.custom-step-style .ant-steps-item-finish .ant-steps-icon {
+  background-color: #735bf2 !important;
+  border-color: #735bf2 !important;
+}
+
+/* Optional: Change text/icon color too */
+.custom-step-style .ant-steps-item-process .ant-steps-icon > .ant-steps-icon-dot {
+  background: #735bf2 !important;
+}
+
+/* iOS DatePicker Fix */
+.ios-datepicker-fix {
+  /* Enable momentum scrolling on iOS */
+  -webkit-overflow-scrolling: touch;
+}
+
+.ios-datepicker-fix .ant-picker-panel-container {
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  /* Prevent iOS from interfering with scrolling */
+  touch-action: pan-x !important;
+}
+
+.ios-datepicker-fix .ant-picker-panel {
+  min-width: 100% !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+.ios-datepicker-fix .ant-picker-body {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  min-width: 280px;
+}
+
+.ios-datepicker-fix .ant-picker-content {
+  min-width: 280px !important;
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+}
+
+/* Time Picker Specific Fixes for iOS */
+.ios-datepicker-fix .ant-picker-time-panel {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  width: 100% !important;
+  min-width: 200px !important;
+}
+
+.ios-datepicker-fix .ant-picker-time-panel-content {
+  display: flex !important;
+  flex-direction: row !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  -webkit-overflow-scrolling: touch !important;
+  width: 100% !important;
+  min-width: 200px !important;
+  touch-action: pan-x !important;
+}
+
+.ios-datepicker-fix .ant-picker-time-panel-column {
+  flex-shrink: 0 !important;
+  min-width: 60px !important;
+  max-width: 80px !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Force AM/PM column to always be visible */
+.ios-datepicker-fix .ant-picker-time-panel-column:last-child {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  min-width: 60px !important;
+  flex-shrink: 0 !important;
+}
+
+/* Ensure all time picker cells are touchable */
+.ios-datepicker-fix .ant-picker-time-panel-cell {
+  touch-action: manipulation !important;
+  padding: 4px 8px !important;
+  white-space: nowrap !important;
+}
+
+/* Ensure touch events work properly on iOS */
+.ios-datepicker-fix .ant-picker-cell {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Fix for calendar navigation buttons on iOS */
+.ios-datepicker-fix .ant-picker-header-view {
+  touch-action: manipulation;
+}
+
+/* Alternative approach - make the entire popup scrollable */
+@media screen and (max-width: 768px) {
+  .custom-datePicker-popup {
+    max-width: 100vw !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  /* For iOS specifically */
+  @supports (-webkit-touch-callout: none) {
+    .custom-datePicker-popup .ant-picker-panel-container {
+      position: relative !important;
+      overflow-x: scroll !important;
+      overflow-y: hidden !important;
+      -webkit-overflow-scrolling: touch !important;
+      /* Prevent zoom on iOS */
+      touch-action: pan-x pinch-zoom !important;
+    }
+
+    /* Force time picker to show all columns initially */
+    .custom-datePicker-popup .ant-picker-time-panel-content {
+      width: auto !important;
+      min-width: 200px !important;
+      display: flex !important;
+      flex-wrap: nowrap !important;
+    }
+
+    /* Ensure AM/PM is always rendered */
+    .custom-datePicker-popup .ant-picker-time-panel-column {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  }
+}
+
+.collapse-no-spacing .ant-collapse-item {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.collapse-no-spacing .ant-collapse-header {
+  background-color: transparent !important;
+}
+
+.collapse-no-spacing .ant-collapse-content {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.collapse-no-spacing .ant-collapse-content-box {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.custom-select-dropdown .ant-select-item-option {
+  @apply !text-xs !font-semibold !text-textColor hover:!bg-[#E3F2FD] hover:!text-secondaryColor;
+}
+
+.custom-select-dropdown .ant-select-selection-item {
+  @apply !text-sm !font-semibold;
+}
+
+/* The horizontal scroller (you already have this) */
+.kanban {
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* keep enough height to fit your board; adjust if you have other headers */
+  /* height can remain auto; columns will size themselves with min-height below */
+}
+
+/* Make columns stretch to the same height */
+.kanban-container {
+  display: flex;
+  align-items: stretch; /* critical: make all children same height */
+  gap: 16px; /* adjust spacing */
+  padding-bottom: 16px; /* breathing room for last row */
+}
+
+/* Column shell */
+.kanban-col {
+  display: flex;
+  flex-direction: column;
+  width: 360px; /* whatever your card column width is */
+  min-width: 360px;
+  /* make every column match the tallest by stretching with the container */
+}
+
+/* Sticky header (never scrolls with cards) */
+.kanban-col-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 12px;
+  background: #2b6cb0; /* fallback; JS sets inline color */
+  color: #fff;
+}
+
+.kanban-col-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.kanban-col-badge {
+  display: inline-block;
+  min-width: 22px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.18);
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+/* Scrollable body: fills remaining space, all columns equal height */
+.kanban-col-body {
+  flex: 1 1 auto; /* take all remaining height */
+  min-height: 0; /* allow child overflow scrolling */
+  overflow-y: auto; /* ONLY the cards scroll */
+  padding-top: 8px; /* gap under header */
+}
+
+/* (Optional) if SectionItem renders its own header/title, hide it since we added our own */
+.kanban-col-body .section-item-header,
+.kanban-col-body .kanban-section-header {
+  display: none !important;
+}
+.kanban-col-body .kanban-section-header,
+.kanban-col-body .section-header,
+.kanban-col-body .section-item-header {
+  display: none !important;
+}
+
+.kanban-container {
+  display: flex;
+  align-items: stretch; /* <-- this is key */
+  gap: 16px;
+  height: calc(100vh - 180px); /* adjust for top nav height */
+}
+
+/* each column stretches fully */
+.kanban-col {
+  display: flex;
+  flex-direction: column;
+  width: 360px;
+  min-width: 360px;
+  height: 100%; /* fill parent height */
+}
+
+/* header remains sticky */
+.kanban-col-header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  border-radius: 8px 8px 0 0;
+  padding: 10px 12px;
+  background: #2b6cb0;
+  color: #fff;
+}
+
+/* body scrolls inside the fixed-height column */
+.kanban-col-body {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  background: #fafafa;
+  padding: 8px 4px;
+}
+@media (max-width: 640px) {
+  /* Shrink modal to viewport with comfy margin; desktop unchanged */
+  .ds-mtr-modal .ant-modal {
+    max-width: none;
+    width: calc(100vw - 24px) !important;
+    margin: 0 auto;
+  }
+  .ds-mtr-modal .ant-modal-content {
+    border-radius: 12px;
+    padding: 16px; /* inner padding on mobile */
+  }
+}
+@media (max-width: 768px) {
+  .mobile-fill {
+    height: 100svh; /* stable small viewport (no URL-bar jump) */
+  }
+  .pb-mobile-nav {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0px) + 72px);
+  }
+  .mobile-scroll {
+    overscroll-behavior-y: contain;
+    overflow-anchor: none;
+    scrollbar-gutter: stable both-edges;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar in Firefox */
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+/* Hide scrollbar in Edge/IE */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+}

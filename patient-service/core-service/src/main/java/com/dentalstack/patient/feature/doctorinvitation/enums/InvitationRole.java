@@ -1,0 +1,18 @@
+package com.dentalstack.patient.feature.doctorinvitation.enums;
+
+public enum InvitationRole {
+    CONSULTING_ORTHODONTIST,
+    CLINIC_OWNER,
+    IN_OFFICE_MANUFACTURER,
+    ALIGNER_COMPANY_OR_LAB,
+    COMMERCIAL_ALIGNER_LAB,
+    LAB_STAFF,
+    CUSTOMER,
+    VENDOR,
+    ENTERPRISE_COMPANY_LAB,
+    CUSTOM,
+    INTERNAL_USER,
+    ENTERPRISE_CUSTOMER,
+    GROWTH_CUSTOMER,
+    PRACTICE_CUSTOMER
+}

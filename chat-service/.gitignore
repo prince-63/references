@@ -1,0 +1,66 @@
+HELP.md
+.gradle
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+!**/src/main/**/bin/
+!**/src/test/**/bin/
+
+### IntelliJ IDEA ###
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+# .gitignore
+
+# Gradle-specific generated files
+.gradle/
+
+# Ignore compiled Java classes
+*.class
+
+# Ignore IntelliJ IDEA project files
+/.idea/
+.idea_modules/
+
+# Ignore build output directories in specific source folders
+**/src/main/**/build/
+**/src/test/**/build/
+src/main/resources/dentalstack*
+src/main/resources/application*
+.idea/compiler.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/aws.xml
+/src/main/java/com/dentalstack/chat/config/SpringSecurityLocal.java
+/src/main/java/com/dentalstack/chat/config/SecurityConfigLocal.java
+docker-local
+.DS_Store
+src/.DS_Store
+gradlew
+src/main/resources/*-*.yml
+.yml
+.yaml

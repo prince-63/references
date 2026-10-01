@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="//in.fw-cdn.com" />
+    <link rel="dns-prefetch" href="//dentalstackcom.wchat.webpush.in.myfreshworks.com" />
+
+    <!-- Load Freshchat asynchronously to avoid blocking -->
+    <script async src="//in.fw-cdn.com/31588096/794712.js" chat="true"></script>
+    <script>
+      // read user info from localStorage so widget code can use it
+      let userId = null
+      let userDetails = null
+      try {
+        if (typeof localStorage !== 'undefined') {
+          userId = localStorage.getItem('userId')
+          const raw = localStorage.getItem('userDetail')
+          userDetails = raw ? JSON.parse(raw) : null
+        }
+      } catch (e) {
+        console.warn('failed to access localStorage for freshchat', e)
+      }
+
+      window.fcSettings = {
+        onInit: function () {
+          window.fcWidgetMessengerConfig = {
+            config: {
+              headerProperty: {
+                hideChatButton: true,
+              },
+            },
+          }
+          if (!userId) window.fcWidget.hide()
+          if (userDetails) {
+            window.fcWidget.setExternalId(userId)
+            window.fcWidget.user.setFirstName(
+              userDetails.first_name + ' ' + userDetails?.last_name ?? userDetails?.last_name
+            )
+            window.fcWidget.user.setEmail(userDetails?.email)
+          }
+          window.fcWidget.init({
+            token: 'b17bf825-cffe-4429-9ef4-a5630b878dd0',
+            host: 'https://dentalstackcom.wchat.webpush.in.myfreshworks.com',
+            siteId: '45c703d7-f365-4bf8-b6dc-09fb13f1a771',
+            config: {
+              headerProperty: {
+                hideChatButton: false, // Show chat button
+              },
+              launchConfig: {
+                headerText: 'Chat with us!',
+                primaryColor: '#4a90e2',
+              },
+            },
+          })
+        },
+      }
+    </script>
+
+    <!-- Optimized Google Fonts loading with font-display: swap -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800;900&family=Kranky&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="fullscreen-root"></div>
+  </body>
+</html>

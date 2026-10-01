@@ -1,0 +1,80 @@
+/* Orders tab custom styling - supports white labeling via CSS variables from getColorPalette */
+.patient-orders-tabs .ant-tabs-nav {
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--lighter-gray, #e6e6e6);
+}
+
+.patient-orders-tabs .ant-tabs-tab {
+  padding: 0;
+  margin: 0 4px 0 0;
+  border: none;
+}
+
+.patient-orders-tabs .ant-tabs-tab + .ant-tabs-tab {
+  margin-left: 8px;
+}
+
+.patient-orders-tabs .ant-tabs-ink-bar {
+  display: none;
+}
+
+.patient-orders-tab-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  background: transparent;
+  color: var(--text-color, #666666);
+  transition: all 180ms cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1.5px solid transparent;
+  min-width: 140px;
+}
+
+.patient-orders-tab-label:hover {
+  background: var(--primary-support, #f5f4fe);
+  border-color: var(--primary-support, #f5f4fe);
+  transform: translateY(-1px);
+}
+
+.patient-orders-tabs .ant-tabs-tab-active .patient-orders-tab-label {
+  background: var(--primary-color, #735bf2);
+  color: #ffffff;
+  border-color: var(--primary-color, #735bf2);
+  box-shadow: 0 2px 8px rgba(115, 91, 242, 0.2);
+}
+
+.patient-orders-tabs .ant-tabs-tab-active .patient-orders-tab-label .opacity-75 {
+  opacity: 0.9;
+}
+
+.patient-orders-tabs .ant-tabs-tab-btn {
+  padding: 0 !important;
+}
+
+.patient-orders-tabs .ant-tabs-tab:focus-visible .patient-orders-tab-label {
+  outline: 2px solid var(--primary-color, #735bf2);
+  outline-offset: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .patient-orders-tabs .ant-tabs-nav-list {
+    display: flex;
+    gap: 8px;
+    padding-bottom: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .patient-orders-tab-label {
+    padding: 14px 18px;
+    min-width: 130px;
+  }
+
+  .patient-orders-tabs .ant-tabs-nav {
+    margin-bottom: 1rem;
+  }
+}

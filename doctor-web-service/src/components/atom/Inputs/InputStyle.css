@@ -1,0 +1,32 @@
+/* Your CSS file or styles within your component */
+.input-container input {
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0.75rem;
+  position: relative;
+  width: 100%;
+}
+
+/* Custom style for the date input */
+.custom-date-input {
+  box-sizing: border-box;
+  outline: 0;
+  padding: 0.75rem;
+  position: relative;
+  width: 100%;
+}
+
+/* Custom style for the date picker indicator */
+.custom-date-input::-webkit-calendar-picker-indicator {
+  background: transparent;
+  bottom: 0;
+  color: transparent;
+  cursor: pointer;
+  height: auto;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: auto;
+  z-index: 2;
+}

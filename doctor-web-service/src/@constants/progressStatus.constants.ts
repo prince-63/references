@@ -1,0 +1,6 @@
+export default {
+  NOT_STARTED: 'NOT_STARTED',
+  IN_PROGRESS: 'IN_PROGRESS',
+  COMPLETE: 'COMPLETE',
+  DISCARDED: 'DISCARDED',
+} as const

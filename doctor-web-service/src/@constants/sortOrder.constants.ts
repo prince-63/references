@@ -1,0 +1,4 @@
+export default {
+  OLDEST_TO_NEWEST: 'OLDEST_TO_NEWEST',
+  NEWEST_TO_OLDEST: 'NEWEST_TO_OLDEST',
+} as const
